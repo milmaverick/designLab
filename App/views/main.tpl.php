@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>esProject</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" /> -->
+  <!-- <script src="js/bootstrap.js" type="text/javascript"></script> -->
+  <!-- <script src="js/jquery.js" type="text/javascript"></script> -->
+  <link rel="stylesheet" href="/App/css/style.css">
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="logo">
+          FastSearch
+        </div>
+        <nav class="nav" id="nav">
+          <a class="nav__link " href="/">Home</a>
+          <a class="nav__link" id="login" data-toggle="modal" data-target="#exampleModal"
+          href="#">Админ. Панель</a>
+          <a class="nav__link" id="logOut" href="#">Выйти из АДМИНКИ</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+<div class="">
+  <div class="container">
+    <div class="main">
+      <div class="alert alert-success" id="success_ms" role="alert">
+        Успешный отправлено!
+      </div>
+      <div class="alert alert-danger" id="danger_ms" role="alert">
+
+      </div>
+      <form id="form" method="post" enctype="multipart/form-data">
+        <input type="text" class="form-control"  name="name" id="name" placeholder="Ваше имя" required="required"/>
+        <input type="text" name="email" id="email" class="form-control" placeholder="Email" required="required"/>
+        <span id="valid"></span>
+        <textarea name="text" id="text" class="form-control" rows="3" required="required" placeholder="Текст задачи" ></textarea>
+        <input id="thisPh" type="file" name="uploadimage" multiple>
+        <button type="submit" class="btn btn-primary">Отправить</button>
+      </form>
+
+      <div class="selector">
+        Сортировать по :
+        <select id = "selectorID">
+          <option selected value="date">Дата</option>
+          <option value="email">Email</option>
+          <option value="name">Name</option>
+        </select>
+      </div>
+      <div id="content">
+        <?= $content ?>
+      </div>
+    </div>
+
+    <div id="pagination">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <!--  -->
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Вход в Админ. Панель</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-success" id="alert-success" role="alert">
+
+        </div>
+        <div class="alert alert-danger" id="alert-danger" role="alert">
+
+        </div>
+        <form id="form2">
+          <input type="text" name="email" id="admin" placeholder="admin" required="required"/>
+          <span id="valid"></span>
+          <br>
+          <input type="password" name="password" id="password1" placeholder="Пароль" required="required"/>
+          <span id="valid"></span>
+          <br>
+        </form>
+        <form id="formChange">
+          <textarea class="displayNone" id="idChange"> </textarea>
+          Name:
+          <textarea  class="form-control"  name="name" id="nameChange" rows="1" placeholder="Ваше имя" required="required"></textarea>
+          email:
+          <textarea  name="email" id="emailChange" class="form-control" rows="1" placeholder="Email" required="required"></textarea>
+          text:
+          <textarea name="text" id="textChange" class="form-control" rows="3" required="required" placeholder="Текст комментария" ></textarea>
+          <br>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div id="signInFormButton">
+          <button type="button"  id="signinBtn" class="btn btn-primary">Вход</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        <div id="formChangeButton">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" id="updateCom" class="btn btn-danger">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="/App/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

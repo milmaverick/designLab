@@ -1,0 +1,171 @@
+body {
+	background-color: #cccccc;
+	color: #000;
+}
+
+a:hover{
+	color:#fff;
+  text-decoration: none;
+}
+
+input{
+	margin-bottom: 5px;
+}
+
+img{
+	width: 80px;
+}
+
+textarea {
+	margin-bottom: 5px;
+	width : 250px;
+	height: 100px;
+}
+
+.container {
+	background-color: white;
+	padding: 0;
+}
+
+.header__inner{
+
+	background-color: #e74c3c;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo{
+	margin-left: 20px;
+	height: 100%;
+	max-height: 101px;
+	color: white;
+	text-transform: uppercase;
+}
+
+.nav{
+	font-size: 0;
+	text-transform: uppercase;
+}
+
+.nav__link{
+	font-size: 16px;
+	line-height: 1;
+	height: 100%;
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	padding: 40px 20px 45px ;
+	position: relative;
+	transition: background .2s linear;
+}
+
+.nav__link:hover{
+	background-color: #f46758;
+}
+
+.nav__link.active{
+	background-color: #f46758;
+}
+
+.container>.main{
+	padding: 10px;
+}
+
+.main #content{
+	display: block;
+	min-height: 450px;
+}
+
+.selector{
+	margin: 20px auto;
+}
+
+.comment{
+	display: block;
+	min-height: 80px;
+	height: 100%;
+	margin-top: 15px;
+	padding: 0 10px;
+	border-radius: 5px;
+	background-color: #e9ecef;
+}
+.task_inner{
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.head__tasks{
+	display: flex;
+	justify-content:flex-start;
+	line-height: 1.6;
+}
+
+.head__tasks>div{
+	margin-right: 20px;
+}
+
+.options>span{
+	margin: 0 10px;
+}
+
+#pagination {
+	display: block;
+	width: 150px;
+	height: 50px;
+	margin: 10px auto;
+}
+
+.res{
+	display: block;
+	float: right;
+}
+
+.res a{
+	text-transform: uppercase;
+}
+
+.isChanged {
+	font-weight: 400;
+	text-transform: uppercase;
+	color:#082567;
+	margin-right: 10px;
+}
+
+.resChange a{
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.res .isPass{
+	text-align: center;
+	margin: 0
+}
+
+.resDel a{
+	color:red;
+}
+
+.resReturn {
+	color:#00a550;
+}
+
+.mr-3{
+	margin: 10px;
+}
+.alert{
+	display: none;
+}
+
+#logOut{
+	display: none;
+}
+
+.comment.doneElement{
+	background-color: #77dd77;
+}
+
+.displayNone{
+	display: none;
+}
